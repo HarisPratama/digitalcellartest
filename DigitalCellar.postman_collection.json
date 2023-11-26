@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "e3c73139-d9b0-4da6-908d-4873d8d52d2f",
+		"name": "DigitalCellar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13238479"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Haris",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "haris@maildrop.cc",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Haris",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "haris@maildrop.cc",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWM2MDRhYWJiNDU1MWJmNWQ5ZTUxNzg0MDY5NjIzOTVkMmRjNWRjMDM2NzY2NzliMjk2NzgzMWFkNjdmODc2MDAyNGQ4ZTgwNTQ0YTE5OTMiLCJpYXQiOjE3MDA5Njg4NzYuMDU5MjY2LCJuYmYiOjE3MDA5Njg4NzYuMDU5MjY3LCJleHAiOjE3MzI1OTEyNzYuMDQ4Nzc0LCJzdWIiOiIxMyIsInNjb3BlcyI6W119.AEFmr43kVGxBLwb7Mfwm2nlKVlxcgux22yS_sTlhJDgJ40UFsyJyTA0yG3hd3f7C6wDx95Zu2mkoAOSMASxYPXsuGY60gxfxoVhoqtowdOAtQHEJVTUkA5hTgA99LJVOWo5tqtDxblMtQ45mymif1eiFL4sWh4K-G5VmHDhmIn_FKfGptrXm5ChNdGsMN1IGzE2KLKIKlz5BekuT_DEMAXAhL1svbsoHYa7MfksAggoRsdEsEW1p7dw2NUDdpx9pTKbN0LyiZLOvJA8dE1Mv353HTIrLKTOYlWKNliOsiVicJ9E5pNTjCro5BVQl4AjyhA-jpGXqJih5twJxanIhEHJa8PkrSmQ4aHpe609MXNWkqOiJgml01XdweZUPl7TdMLaIFZzZi04W_pmyLTpuvgf4-Pa53C6MF8c4JsuiE2zLJLW3BEufLvQ-IrTZ8C-VWp80FZrQUIEVpdKqde_UspHKeOeK2L75vNuj8dzTAEsH4kSmzVKvKoyvneBwmgc3ZEhyHZCKzGU5DtNSFaXN1z5X_biPICEG92yW5VwuCJPUiO8ticdbrTyKPMDy0H0DolTFngcCaPnRXucWCG69uYipbS4AhB4Lh8pbS3C-hKeQF9iXAv32JcCjPfQLlXm4UCJoXgLDCINiC94lpvTWXvvfM3xmzh6PL5il3bSMFRU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/users?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjU2N2IyNjZmOTZlNDU0NTc0YjIxMDgzZDgyZjcwZDIyZDQzYWM3YWFhNDdmN2NmY2Y3NGE4NTVkMTQ1Yjg2NzJkMjEwNDFlNDM2MGYxMDUiLCJpYXQiOjE3MDA4MTUxNzQuNzQzNzAyLCJuYmYiOjE3MDA4MTUxNzQuNzQzNzAzLCJleHAiOjE3MzI0Mzc1NzQuNzM0MzU5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YszvUbZQoBWodhkRfX_3iAg7S0PCtdbNvIInxGuBhBJ_F_0t6bcA4GyfG6njDDbSH7vDx0ZVNQ39NuQWLY-X_Jcfse2rz7yBoI9LkeG0l_X7i_4plfEgbhxuqBYIVnil9_aSjEF_dn4MqA2DbvEHnRg_2h7EiBRuFZcVOhpg0ixTKc9H3xuadrMVAWAtST8G_eZ3j5q5eZPfQ7I7VFquWM0gggdz5ZctbwcKD1mS9wxK__jWRqVhEbX_IHlNT9_ycEAbmftVUu6KME3xx_ZYhWqk54s9Wg54RwxE76Bcbf0xEJkdU96w_fbDklKUDO437F2GlU0BA8ECD1qdZghu0Lpdlks9cG_el4jVYnYZqAdF6hhsCMz9cLT6PGJiihU5w2bMtCXwE55UK3NNv1ePDw2z3wh08c1VjrJ6rGinaMrT8UcZiFoCiuEyr0N72mWo2cshE2eBXmCsDXGgIRJRw1ndjDmlQrz9YWLeHAQkG0Rp4mcoEotnReRUMEJ2SMmUNvOrcaBl6rC0DKB6L8CGgzFXldI_4jU7MzCKqWAWzWHlJ2cd8xyjmFyeMxsZ36hw4DcbpuLQ3krcGR_j9nXT9fh-LGSm_OZ18YH10_TVC3YhPEBKiI8kq_h_1oan-UMjishfpXovv_N8QvaPVCOlabi8uZA1kNjSIzrmNUrsX2s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Haris Pratama",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "haris@maildrop.cc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWM2MDRhYWJiNDU1MWJmNWQ5ZTUxNzg0MDY5NjIzOTVkMmRjNWRjMDM2NzY2NzliMjk2NzgzMWFkNjdmODc2MDAyNGQ4ZTgwNTQ0YTE5OTMiLCJpYXQiOjE3MDA5Njg4NzYuMDU5MjY2LCJuYmYiOjE3MDA5Njg4NzYuMDU5MjY3LCJleHAiOjE3MzI1OTEyNzYuMDQ4Nzc0LCJzdWIiOiIxMyIsInNjb3BlcyI6W119.AEFmr43kVGxBLwb7Mfwm2nlKVlxcgux22yS_sTlhJDgJ40UFsyJyTA0yG3hd3f7C6wDx95Zu2mkoAOSMASxYPXsuGY60gxfxoVhoqtowdOAtQHEJVTUkA5hTgA99LJVOWo5tqtDxblMtQ45mymif1eiFL4sWh4K-G5VmHDhmIn_FKfGptrXm5ChNdGsMN1IGzE2KLKIKlz5BekuT_DEMAXAhL1svbsoHYa7MfksAggoRsdEsEW1p7dw2NUDdpx9pTKbN0LyiZLOvJA8dE1Mv353HTIrLKTOYlWKNliOsiVicJ9E5pNTjCro5BVQl4AjyhA-jpGXqJih5twJxanIhEHJa8PkrSmQ4aHpe609MXNWkqOiJgml01XdweZUPl7TdMLaIFZzZi04W_pmyLTpuvgf4-Pa53C6MF8c4JsuiE2zLJLW3BEufLvQ-IrTZ8C-VWp80FZrQUIEVpdKqde_UspHKeOeK2L75vNuj8dzTAEsH4kSmzVKvKoyvneBwmgc3ZEhyHZCKzGU5DtNSFaXN1z5X_biPICEG92yW5VwuCJPUiO8ticdbrTyKPMDy0H0DolTFngcCaPnRXucWCG69uYipbS4AhB4Lh8pbS3C-hKeQF9iXAv32JcCjPfQLlXm4UCJoXgLDCINiC94lpvTWXvvfM3xmzh6PL5il3bSMFRU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
